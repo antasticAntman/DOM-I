@@ -38,5 +38,61 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "accent-img": "http://localhost:9000/img/accent.png",
   },
 };
+// images
+const logoImg = document.querySelector('#logo-img')
+logoImg.src = siteContent.images['logo-img']
+const ctaImg = document.querySelector('#cta-img')
+ctaImg.src = siteContent.images['cta-img']
+const aImg = document.querySelector('#middle-img')
+aImg.src = siteContent.images["accent-img"]
+// images
 
-console.log('project wired!')
+// footer
+const footLink = document.querySelector('footer a')
+console.log(footLink)
+footLink.textContent = siteContent.footer.copyright
+footLink.classList.add('bold')
+// footer
+
+// section
+const contact = document.querySelector('.contact')
+// section
+contact.children[0].textContent = siteContent.contact["contact-h4"]
+contact.children[1].textContent = siteContent.contact.address
+contact.children[2].textContent = siteContent.contact.phone
+contact.children[3].textContent = siteContent.contact.email
+
+// Main C //top C
+const topC = document.querySelector('.top-content')
+topC.children[0].children[0].textContent =siteContent["main-content"]["features-h4"]
+topC.children[0].children[1].textContent =siteContent["main-content"]["features-content"]
+topC.children[1].children[0].textContent =siteContent["main-content"]["about-h4"]
+topC.children[1].children[1].textContent =siteContent["main-content"]["about-content"]
+//top C
+// bottom c
+const bottomC = document.querySelector('.bottom-content')
+bottomC.children[0].children[0].textContent =siteContent["main-content"]["services-h4"]
+bottomC.children[0].children[1].textContent =siteContent["main-content"]["services-content"]
+bottomC.children[1].children[0].textContent =siteContent["main-content"]["product-h4"]
+bottomC.children[1].children[1].textContent =siteContent["main-content"]["product-content"]
+bottomC.children[2].children[0].textContent =siteContent["main-content"]["vision-h4"]
+bottomC.children[2].children[1].textContent =siteContent["main-content"]["vision-content"]
+// bottom c
+// Main C
+
+// cta
+const cta = document.querySelector('.cta-text')
+cta.children[0].textContent = siteContent.cta.h1
+cta.children[1].textContent = siteContent.cta.button
+// cta
+
+// nav
+const navL = document.querySelectorAll('nav a')
+const navT = Object.values(siteContent.nav)
+navL.forEach((link, idx)=>{
+link.textContent = navT[idx]
+link.classList.add('italic')
+})
+console.log(navL)
+
+// nav
